@@ -10,9 +10,13 @@ namespace BoulderDash
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.PrintLevel(1);
+            //Game game = new Game();
+            //game.PrintLevel(1);
 
+            Controller.Parser.ParseLevel levelParser = new Controller.Parser.ParseLevel();
+            levelParser.ChooseLevel(1);
+            levelParser.Parse();
+            Console.ReadKey();
         }
     }
 }

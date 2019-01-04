@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game.cs" />
     <Compile Include="Model\Interfaces\ICollisionable.cs" />
     <Compile Include="Model\Interfaces\IDrawable.cs" />
     <Compile Include="Model\Interfaces\IEatable.cs" />

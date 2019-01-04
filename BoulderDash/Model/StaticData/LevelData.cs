@@ -80,5 +80,21 @@ class LevelData
         { 'S',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','S' },
         { 'S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','S' }
     };
+
+    public char[,] getLevel1()
+    {
+        return Level1; 
+
+    }
+    public char[,] getLevel2()
+    {
+        return Level2;
+
+    }
+    public char[,] getLevel3()
+    {
+        return Level3;
+
+    }
 }
 

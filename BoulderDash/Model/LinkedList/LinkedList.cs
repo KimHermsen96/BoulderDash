@@ -10,20 +10,22 @@ namespace BoulderDash.Model.LinkedList
     {
         private Node head;
         private Node LastAccessed;
+        private Node SecondLastRowFirstColumn;
+        private Node SecondLastRowColumnIterator;
 
         public bool Empty()
         {
             return head == null ? true : false;
         }
 
-        public void AddFirst(Object data, Node top, Node bottom, Node left, Node right)
+        public void AddFirst(Node x)
         {
-            Node x = new Node(data, top, bottom, left, right);
-
             if(head == null)
             {
                 this.head = x;
                 this.LastAccessed = this.head;
+                this.SecondLastRowFirstColumn = this.head;
+              
             }
             else
             {
@@ -31,32 +33,30 @@ namespace BoulderDash.Model.LinkedList
             }
         }
 
-        public void AddTop(Object data, Node top, Node bottom, Node left, Node right, Node accessor)
+        public void CreatedLinkWithAppend(bool newLine, Object data)
         {
-            Node topNode = new Node(data, top, bottom, left, right);
-            accessor.Top = topNode;
-            topNode.Bottom = accessor;
-        }
+            Node x = new Node(data, null, null, null, null);
 
-        public void AddBottom(Object data, Node top, Node bottom, Node left, Node right, Node accessor)
-        {
-            Node botNode = new Node(data, top, bottom, left, right);
-            accessor.Bottom = botNode;
-            botNode.Top = accessor;
-        }
+            if(Empty())
+            {
+                AddFirst(x);
+            }
 
-        public void AddLeft(Object data, Node top, Node bottom, Node left, Node right, Node accessor)
-        {
-            Node leftNode = new Node(data, top, bottom, left, right);
-            accessor.Left = leftNode;
-            leftNode.Right = accessor;
-        }
+            if (newLine)
+            {
+                SecondLastRowFirstColumn.Bottom = x;
+                LastAccessed = x;
 
-        public void AddRight(Object data, Node top, Node bottom, Node left, Node right, Node accessor)
-        {
-            Node rightNode = new Node(data, top, bottom, left, right);
-            accessor.Right = rightNode;
-            rightNode.Left = accessor;
+                SecondLastRowColumnIterator = x;
+                SecondLastRowFirstColumn = LastAccessed;
+
+            }
+            else
+            {
+                LastAccessed.Right = x;
+                LastAccessed = x;
+            }
+            
         }
 
         public Node Head

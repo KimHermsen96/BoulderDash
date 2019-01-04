@@ -16,6 +16,7 @@ namespace BoulderDash
             Controller.Parser.ParseLevel levelParser = new Controller.Parser.ParseLevel();
             levelParser.ChooseLevel(1);
             levelParser.Parse();
+            levelParser.readParse();
             Console.ReadKey();
         }
     }

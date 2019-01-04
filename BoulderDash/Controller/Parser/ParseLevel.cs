@@ -38,40 +38,49 @@ namespace BoulderDash.Controller.Parser
         }
 
         public void Parse()
-        {
-            Node accessor = null;
-            Node accessorRow = linkedList.Head;
-
+        { 
             for (int i = 0; i < LevelArray.GetLength(0); i++)
             {
                 for (int j = 0; j < LevelArray.GetLength(1); j++)
                 {
-                    if (i == 0 && j == 0)
+                    if(j == 0)
                     {
-                        linkedList.AddFirst(LevelArray[i, j], null, null, null, null);
-                        accessor = linkedList.Head;
-                        continue;
+                        linkedList.CreatedLinkWithAppend(true, LevelArray[i, j]);
+                        
                     }
                     else
                     {
-                        if (j == 0)
-                        {
-                            if (i > 0)
-                            {
-                                linkedList.AddBottom(LevelArray[i, j], null, null, null, null, accessor);
-                                accessor = accessor.Bottom;
-                                accessorRow = accessor;
-                                continue;
-                            }
-                            accessorRow = accessor;
-                        }
+                        linkedList.CreatedLinkWithAppend(false, LevelArray[i, j]);
                     }
-                    linkedList.AddRight(LevelArray[i, j], null, null, null, null, accessor);
-                    accessor = accessor.Right;
+                    
                 }
             }
-            accessor = accessorRow;
         }
+
+        //public void readParse()
+        //{
+        //    Node x = linkedList.Head;
+        //    Node y = linkedList.Head;
+
+        //    while (true)
+        //    {
+        //        Console.Write(y.Data);
+        //        if (y.Right != null)
+        //        {
+        //            y = y.Right;
+        //        }
+        //        else if (x.Bottom != null)
+        //        {
+        //            Console.WriteLine();
+        //            y = x.Bottom;
+        //            x = y;
+        //        }
+        //        else
+        //        {
+        //            break;
+        //        }
+        //    }
+        //}
     }
 }
 

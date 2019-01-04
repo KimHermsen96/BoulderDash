@@ -43,13 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
-    <Compile Include="LevelData.cs" />
+    <Compile Include="Model\Interfaces\ICollisionable.cs" />
+    <Compile Include="Model\Interfaces\IDrawable.cs" />
+    <Compile Include="Model\Interfaces\IEatable.cs" />
+    <Compile Include="Model\Interfaces\IInteractable.cs" />
+    <Compile Include="Model\Interfaces\IPlayer.cs" />
+    <Compile Include="Model\Interfaces\ITntDestroyable.cs" />
+    <Compile Include="Model\Main.cs" />
+    <Compile Include="Model\StaticData\LevelData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Draw.cs" />
+    <Compile Include="View\Main.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,42 +45,42 @@ namespace BoulderDash.Controller.Parser
                 {
                     if(j == 0)
                     {
-                        linkedList.CreatedLinkWithAppend(true, LevelArray[i, j]);
+                        linkedList.AppendRightAndBreak(true, LevelArray[i, j]);
                         
                     }
                     else
                     {
-                        linkedList.CreatedLinkWithAppend(false, LevelArray[i, j]);
+                        linkedList.AppendRightAndBreak(false, LevelArray[i, j]);
                     }
                     
                 }
             }
         }
 
-        //public void readParse()
-        //{
-        //    Node x = linkedList.Head;
-        //    Node y = linkedList.Head;
+        public void readParse()
+        {
+            Node x = linkedList.Head;
+            Node y = linkedList.Head;
 
-        //    while (true)
-        //    {
-        //        Console.Write(y.Data);
-        //        if (y.Right != null)
-        //        {
-        //            y = y.Right;
-        //        }
-        //        else if (x.Bottom != null)
-        //        {
-        //            Console.WriteLine();
-        //            y = x.Bottom;
-        //            x = y;
-        //        }
-        //        else
-        //        {
-        //            break;
-        //        }
-        //    }
-        //}
+            while (true)
+            {
+                Console.Write(y.Data);
+                if (y.Right != null)
+                {
+                    y = y.Right;
+                }
+                else if (x.Bottom != null)
+                {
+                    Console.WriteLine();
+                    y = x.Bottom;
+                    x = y;
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
     }
 }
 

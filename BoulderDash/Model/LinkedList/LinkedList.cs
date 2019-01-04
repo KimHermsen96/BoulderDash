@@ -33,7 +33,7 @@ namespace BoulderDash.Model.LinkedList
             }
         }
 
-        public void CreatedLinkWithAppend(bool newLine, Object data)
+        public void AppendRightAndBreak(bool newLine, Object data)
         {
             Node x = new Node(data, null, null, null, null);
 
@@ -54,6 +54,13 @@ namespace BoulderDash.Model.LinkedList
             else
             {
                 LastAccessed.Right = x;
+
+                if (SecondLastRowColumnIterator != null)
+                {
+                    SecondLastRowColumnIterator.Bottom = x;
+                    SecondLastRowColumnIterator = SecondLastRowColumnIterator.Right;
+                }
+
                 LastAccessed = x;
             }
             

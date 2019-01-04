@@ -62,6 +62,8 @@ namespace BoulderDash.Controller.Parser
             Node x = linkedList.Head;
             Node y = linkedList.Head;
 
+
+            // METHODE nog niet helemaal correct
             while (true)
             {
                 Console.Write(y.Data);

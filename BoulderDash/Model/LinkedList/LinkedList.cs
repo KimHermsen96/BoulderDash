@@ -40,27 +40,29 @@ namespace BoulderDash.Model.LinkedList
             if(Empty())
             {
                 AddFirst(x);
+                return;
             }
 
             if (newLine)
             {
-                SecondLastRowFirstColumn.Bottom = x;
                 LastAccessed = x;
+                SecondLastRowColumnIterator = SecondLastRowFirstColumn;
+                SecondLastRowColumnIterator.Bottom = x;
+                x.Top = SecondLastRowColumnIterator;
+                SecondLastRowColumnIterator = SecondLastRowColumnIterator.Right;
 
-                SecondLastRowColumnIterator = x;
                 SecondLastRowFirstColumn = LastAccessed;
-
             }
             else
             {
-                LastAccessed.Right = x;
-
-                if (SecondLastRowColumnIterator != null)
+                if(SecondLastRowColumnIterator != null)
                 {
                     SecondLastRowColumnIterator.Bottom = x;
+                    x.Top = SecondLastRowColumnIterator;
                     SecondLastRowColumnIterator = SecondLastRowColumnIterator.Right;
                 }
-
+                LastAccessed.Right = x;
+                x.Left = LastAccessed;
                 LastAccessed = x;
             }
             

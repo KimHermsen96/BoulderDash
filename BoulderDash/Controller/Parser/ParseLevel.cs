@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BoulderDash.Model;
+using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.LinkedList;
 
 namespace BoulderDash.Controller.Parser
 {
-    class ParseLevel
+    public class ParseLevel
     {
-        private LinkedList linkedList;
+        public LinkedList linkedList { get; set; }
         private LevelData levelData;
         private char[,] LevelArray;
+
+        public Rockford Rockford { get; set; }
 
         public ParseLevel()
         {
@@ -45,26 +49,38 @@ namespace BoulderDash.Controller.Parser
                 {
                     if(j == 0)
                     {
-                        linkedList.AppendRightAndBreak(true, LevelArray[i, j]);
+                        linkedList.AppendRightAndBreak(true, CreateObject(LevelArray[i, j]));
                         
                     }
                     else
                     {
-                        linkedList.AppendRightAndBreak(false, LevelArray[i, j]);
+                        linkedList.AppendRightAndBreak(false, CreateObject(LevelArray[i, j]));
                     }
                     
                 }
             }
         }
 
-        public void readParse()
+        private IDrawable CreateObject(char r)
+        {
+            if (r == 'R') return Rockford = new Rockford();
+            return null;
+        }
+
+
+        public void Print()
         {
             Node x = linkedList.Head;
             Node y = linkedList.Head;
 
             while (true)
             {
-                Console.Write(y.Data);
+                if(y.Data == null) Console.Write("*");
+                else
+                {
+                    Console.Write(y.Data);
+                }
+
                 if (y.Right != null)
                 {
                     y = y.Right;

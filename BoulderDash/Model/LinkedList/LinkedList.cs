@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BoulderDash.Model.Interfaces;
 
 namespace BoulderDash.Model.LinkedList
 {
-    class LinkedList
+    public class LinkedList
     {
         private Node head;
         private Node LastAccessed;
@@ -33,10 +34,11 @@ namespace BoulderDash.Model.LinkedList
             }
         }
 
-        public void AppendRightAndBreak(bool newLine, Object data)
+        
+        public void AppendRightAndBreak(bool newLine, IDrawable data)
         {
             Node x = new Node(data, null, null, null, null);
-
+            if(data != null) data.Node = x;
             if(Empty())
             {
                 AddFirst(x);

@@ -7,8 +7,8 @@ using BoulderDash.Model.LinkedList;
 
 namespace BoulderDash.Model.Interfaces
 {
-    public interface IDrawable
+    public interface ICharacter
     {
-        Node Node { get; set; }
+        
     }
 }

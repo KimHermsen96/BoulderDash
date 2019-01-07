@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Controller\Parser\ParseLevel.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Model\Firefly.cs" />
+    <Compile Include="Model\Interfaces\ICharacter.cs" />
     <Compile Include="Model\Interfaces\IDrawable.cs" />
     <Compile Include="Model\Interfaces\IEatable.cs" />
     <Compile Include="Model\Interfaces\IInteractable.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Model\LinkedList\LinkedList.cs" />
     <Compile Include="Model\LinkedList\Node.cs" />
     <Compile Include="Model\Main.cs" />
+    <Compile Include="Model\Rockford.cs" />
     <Compile Include="Model\StaticData\LevelData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

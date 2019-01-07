@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BoulderDash.Model.LinkedList
 {
-    class Node
+    public class Node
     {
         private object data;
         private Node top;

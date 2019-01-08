@@ -8,8 +8,8 @@ namespace BoulderDash.Model
 {
     public class MainModel
     {
-        Rockford rockford { get; set; }
-        List<Firefly> fireflies { get; set; }
+        public Rockford Rockford { get; set; }
+        public List<Firefly> Fireflies { get; set; }
 
         public MainModel()
         {

@@ -69,11 +69,11 @@ namespace BoulderDash.Controller.Parser
             switch (drawable)
             {
                 case 'R':
-                    return Rockford = new Rockford();
-                    break;
+                    return mainController.mainModel.Rockford = new Rockford();
                 case 'F':
-                    return Firefly = new Firefly(); ;
-                    break;
+                    Firefly firefly = new Firefly();
+                    mainController.mainModel.Fireflies.Add(firefly);
+                    return firefly;
                 case 'M':
                     Mud mud = new Mud();
                     return mud;
@@ -94,7 +94,6 @@ namespace BoulderDash.Controller.Parser
                     return hardendMud;
                 default:
                     return null;
-                    break;
             }
         }
 

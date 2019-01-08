@@ -13,7 +13,7 @@ namespace BoulderDash.Controller
 
         public Game(MainController mainController)
         {
-            parseLevel = new ParseLevel();
+            parseLevel = new ParseLevel(mainController);
             parseLevel.ChooseLevel(1);
             parseLevel.Parse();
         }

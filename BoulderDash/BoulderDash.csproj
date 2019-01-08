@@ -56,6 +56,7 @@
     <Compile Include="Model\Interfaces\IInteractable.cs" />
     <Compile Include="Model\Interfaces\IPlayer.cs" />
     <Compile Include="Model\Interfaces\ITntDestroyable.cs" />
+    <Compile Include="Model\Mud.cs" />
     <Compile Include="Model\NLinkedList\LinkedList.cs" />
     <Compile Include="Model\NLinkedList\Node.cs" />
     <Compile Include="Model\MainModel.cs" />

@@ -11,6 +11,7 @@ namespace BoulderDash.Model
         public Rockford Rockford { get; set; }
         public List<Firefly> Fireflies { get; set; }
 
+
         public MainModel()
         {
             

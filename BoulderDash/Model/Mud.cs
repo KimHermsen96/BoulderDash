@@ -8,13 +8,13 @@ using BoulderDash.Model.LinkedList;
 
 namespace BoulderDash.Model
 {
-    public class Firefly : Drawable, ICharacter
+    public class Mud : Drawable
     {
         public override Node Node { get; set; }
 
         public override string ToString()
         {
-            return "F";
+            return "M";
         }
     }
 }

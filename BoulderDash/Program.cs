@@ -21,6 +21,7 @@ namespace BoulderDash
             while (x)
             {
                 var ch = Console.ReadKey(false).Key;
+
                 switch (ch)
                 {
                     case ConsoleKey.UpArrow:

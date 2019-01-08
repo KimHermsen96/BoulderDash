@@ -26,7 +26,6 @@ namespace BoulderDash.Model.LinkedList
                 this.head = x;
                 this.LastAccessed = this.head;
                 this.SecondLastRowFirstColumn = this.head;
-              
             }
             else
             {
@@ -35,10 +34,12 @@ namespace BoulderDash.Model.LinkedList
         }
 
         
-        public void AppendRightAndBreak(bool newLine, IDrawable data)
+        public void AppendRightAndBreak(bool newLine, Drawable data)
         {
             Node x = new Node(data, null, null, null, null);
-            if(data != null) data.Node = x;
+
+            if (data != null) data.Node = x;
+
             if(Empty())
             {
                 AddFirst(x);

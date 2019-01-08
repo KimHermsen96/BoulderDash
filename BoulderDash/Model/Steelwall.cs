@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BoulderDash.Model.Interfaces;
-using BoulderDash.Model.NLinkedList;
+using BoulderDash.Model.LinkedList;
 
 namespace BoulderDash.Model
 {
-    public class Firefly : Drawable, ICharacter
+    public class Steelwall : Drawable
     {
         public override Node Node { get; set; }
 
         public override string ToString()
         {
-            return "F";
+            return "S";
         }
     }
 }

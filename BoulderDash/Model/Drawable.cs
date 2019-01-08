@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model.NLinkedList;
 
-namespace BoulderDash.Model.Interfaces
+namespace BoulderDash.Model
 {
-    public interface IDrawable
+    public abstract class Drawable
     {
-        Node Node { get; set; }
+        public abstract Node Node { get; set; }
+        public override abstract string ToString();
     }
 }

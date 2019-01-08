@@ -8,9 +8,9 @@ using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public class Rockford : ICharacter, IDrawable
+    public class Rockford : Drawable, ICharacter
     {
-        public Node Node { get; set; }
+        public override Node Node { get; set; }
 
         public Rockford()
         {
@@ -21,6 +21,7 @@ namespace BoulderDash.Model
 
         private void MoveTo(Node newLocation)
         {
+
             Node.Data = null;
             Node = newLocation;
             newLocation.Data = this;

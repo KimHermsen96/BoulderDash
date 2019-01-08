@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model;
@@ -53,7 +54,6 @@ namespace BoulderDash.Controller.Parser
                     if(j == 0)
                     {
                         linkedList.AppendRightAndBreak(true, CreateObject(LevelArray[i, j]));
-                        
                     }
                     else
                     {
@@ -64,7 +64,7 @@ namespace BoulderDash.Controller.Parser
             }
         }
 
-        private IDrawable CreateObject(char drawable)
+        private Drawable CreateObject(char drawable)
         {
             switch (drawable)
             {
@@ -72,11 +72,30 @@ namespace BoulderDash.Controller.Parser
                     return Rockford = new Rockford();
                     break;
                 case 'F':
-                    return Firefly = new Firefly(); 
+                    return Firefly = new Firefly(); ;
+                    break;
+                case 'M':
+                    Mud mud = new Mud();
+                    return mud;
+                case 'B':
+                    Boulder boulder = new Boulder();
+                    return boulder;
+                case 'D':
+                    Diamond diamond = new Diamond();
+                    return diamond;
+                case 'W':
+                    Wall wall= new Wall();
+                    return wall;
+                case 'S':
+                    Steelwall steelWall = new Steelwall();
+                    return steelWall;
+                case 'H':
+                     HardendMud hardendMud = new HardendMud();
+                    return hardendMud;
                 default:
                     return null;
                     break;
-            } 
+            }
         }
 
     }

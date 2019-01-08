@@ -16,8 +16,7 @@ namespace BoulderDash.Controller
             parseLevel = new ParseLevel(mainController);
             parseLevel.ChooseLevel(1);
             parseLevel.Parse();
+            
         }
-
-
     }
 }

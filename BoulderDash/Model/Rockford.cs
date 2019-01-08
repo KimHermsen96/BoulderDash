@@ -56,5 +56,30 @@ namespace BoulderDash.Model
         {
             return "R";
         }
+
+        public override void PlayerInteract()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void BolderInteract()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void RubbleInteract()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void FireFlyInteract()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DiamondInteract()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

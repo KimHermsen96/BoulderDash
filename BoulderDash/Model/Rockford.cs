@@ -17,8 +17,13 @@ namespace BoulderDash.Model
 
         }
 
-        public void GetPosition()
+        //slaat eerst de nieuwe locatie op . 
+
+        private void MoveTo(Node newLocation)
         {
+            Node.Data = null;
+            Node = newLocation;
+            newLocation.Data = this;
         }
 
         public void MoveRight()
@@ -28,29 +33,22 @@ namespace BoulderDash.Model
 
         }
 
-        private void MoveTo(Node rightLocation)
-        {
-            Node.Data = null;
-            Node = rightLocation;
-            rightLocation.Data = this;
-        }
-
         public void MoveLeft()
         {
-            var rightLocation = Node.Left;
-            MoveTo(rightLocation);
+            var leftLocation = Node.Left;
+            MoveTo(leftLocation);
         }
 
         public void MoveUp()
         {
-            var rightLocation = Node.Top;
-            MoveTo(rightLocation);
+            var up = Node.Top;
+            MoveTo(up);
         }
 
         public void MoveDown()
         {
-            var rightLocation = Node.Bottom;
-            MoveTo(rightLocation);
+            var down = Node.Bottom;
+            MoveTo(down);
         }
 
         public override string ToString()

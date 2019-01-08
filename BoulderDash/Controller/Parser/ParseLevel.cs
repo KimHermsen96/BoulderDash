@@ -16,7 +16,7 @@ namespace BoulderDash.Controller.Parser
         private char[,] LevelArray;
 
         public Rockford Rockford { get; set; }
-
+        public Firefly Firefly { get; set; }
         public ParseLevel()
         {
             levelData = new LevelData();
@@ -61,10 +61,21 @@ namespace BoulderDash.Controller.Parser
             }
         }
 
-        private IDrawable CreateObject(char r)
+        private IDrawable CreateObject(char drawable)
         {
-            if (r == 'R') return Rockford = new Rockford();
-            return null;
+            switch (drawable)
+            {
+                case 'R':
+                    return Rockford = new Rockford();
+                    break;
+                case 'F':
+                    return Firefly = new Firefly(); ; 
+                default:
+                    return null;
+                    break;
+            }
+           
+            
         }
 
 

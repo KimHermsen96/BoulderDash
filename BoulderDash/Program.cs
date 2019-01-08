@@ -11,11 +11,8 @@ namespace BoulderDash
     {
         static void Main(string[] args)
         {
-            //Game game = new Game();
-            //game.PrintLevel(1);
-
             Controller.Parser.ParseLevel levelParser = new Controller.Parser.ParseLevel();
-            levelParser.ChooseLevel(1);
+            levelParser.ChooseLevel(2);
             levelParser.Parse();
             levelParser.Print();
             var levelParserRockford = levelParser.Rockford;
@@ -26,7 +23,6 @@ namespace BoulderDash
                 var ch = Console.ReadKey(false).Key;
                 switch (ch)
                 {
-
                     case ConsoleKey.UpArrow:
                         levelParserRockford.MoveUp();
                         break;
@@ -44,13 +40,7 @@ namespace BoulderDash
                 Console.Clear();
                 levelParser.Print();
             }
-            //          }  Rockford r = new Rockford(levelParser.linkedList);
-            //            r.Move();
-
-
             Console.ReadKey();
-
-
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using BoulderDash.Model.NLinkedList;
+﻿using BoulderDash.Controller;
+using BoulderDash.Model.NLinkedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,13 @@ namespace BoulderDash.View
 {
     class Draw
     {
-        public Draw()
-        {
+        private MainController mainController;
 
+        public Draw(MainController mainController)
+        {
+            this.mainController = mainController;
         }
+
         public void Print()
         {
             //Node x = linkedList.Head;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoulderDash.Model.NLinkedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,38 @@ namespace BoulderDash.View
 {
     class Draw
     {
+        public Draw()
+        {
+
+        }
+        public void Print()
+        {
+            //Node x = linkedList.Head;
+            //Node y = linkedList.Head;
+
+            //while (true)
+            //{
+            //    if (y.Data == null) Console.Write("*");
+            //    else
+            //    {
+            //        Console.Write(y.Data);
+            //    }
+
+            //    if (y.Right != null)
+            //    {
+            //        y = y.Right;
+            //    }
+            //    else if (x.Bottom != null)
+            //    {
+            //        Console.WriteLine();
+            //        y = x.Bottom;
+            //        x = y;
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
+        }
     }
 }

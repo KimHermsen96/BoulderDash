@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Game.cs" />
+    <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\Parser\ParseLevel.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Model\Firefly.cs" />
@@ -52,9 +54,9 @@
     <Compile Include="Model\Interfaces\IInteractable.cs" />
     <Compile Include="Model\Interfaces\IPlayer.cs" />
     <Compile Include="Model\Interfaces\ITntDestroyable.cs" />
-    <Compile Include="Model\LinkedList\LinkedList.cs" />
-    <Compile Include="Model\LinkedList\Node.cs" />
-    <Compile Include="Model\Main.cs" />
+    <Compile Include="Model\NLinkedList\LinkedList.cs" />
+    <Compile Include="Model\NLinkedList\Node.cs" />
+    <Compile Include="Model\MainModel.cs" />
     <Compile Include="Model\Rockford.cs" />
     <Compile Include="Model\StaticData\LevelData.cs" />
     <Compile Include="Program.cs" />

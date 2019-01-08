@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model.Interfaces;
 
-namespace BoulderDash.Model.LinkedList
+namespace BoulderDash.Model.NLinkedList
 {
     public class LinkedList
     {

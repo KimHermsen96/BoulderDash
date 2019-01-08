@@ -5,20 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model;
 using BoulderDash.Model.Interfaces;
-using BoulderDash.Model.LinkedList;
+using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Controller.Parser
 {
     public class ParseLevel
     {
-        public LinkedList linkedList { get; set; }
+        private MainController mainController;
+
+        private LinkedList linkedList;
         private LevelData levelData;
         private char[,] LevelArray;
 
-        public Rockford Rockford { get; set; }
-        public Firefly Firefly { get; set; }
-        public ParseLevel()
+
+        public ParseLevel(MainController mainController)
         {
+            this.mainController = mainController;
+
             levelData = new LevelData();
             linkedList = new LinkedList();
         }
@@ -69,45 +72,13 @@ namespace BoulderDash.Controller.Parser
                     return Rockford = new Rockford();
                     break;
                 case 'F':
-                    return Firefly = new Firefly(); ; 
+                    return Firefly = new Firefly(); 
                 default:
                     return null;
                     break;
-            }
-           
-            
+            } 
         }
 
-
-        public void Print()
-        {
-            Node x = linkedList.Head;
-            Node y = linkedList.Head;
-
-            while (true)
-            {
-                if(y.Data == null) Console.Write("*");
-                else
-                {
-                    Console.Write(y.Data);
-                }
-
-                if (y.Right != null)
-                {
-                    y = y.Right;
-                }
-                else if (x.Bottom != null)
-                {
-                    Console.WriteLine();
-                    y = x.Bottom;
-                    x = y;
-                }
-                else
-                {
-                    break;
-                }
-            }
-        }
     }
 }
 

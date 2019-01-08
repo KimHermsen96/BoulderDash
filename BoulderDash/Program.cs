@@ -4,17 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model;
-
+using BoulderDash.Controller;
 namespace BoulderDash
 {
     public class Program
     {
         static void Main(string[] args)
         {
+            MainController mainController = new MainController();
+
+
+
+
             Controller.Parser.ParseLevel levelParser = new Controller.Parser.ParseLevel();
             levelParser.ChooseLevel(2);
             levelParser.Parse();
-            levelParser.Print();
+            
             var levelParserRockford = levelParser.Rockford;
 
             bool x = true;
@@ -38,7 +43,7 @@ namespace BoulderDash
 
                 }
                 Console.Clear();
-                levelParser.Print();
+                
             }
             Console.ReadKey();
         }

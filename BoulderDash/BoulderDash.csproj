@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Game.cs" />
+    <Compile Include="Controller\Input.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\Parser\ParseLevel.cs" />
+    <Compile Include="Controller\View.cs" />
     <Compile Include="Model\Boulder.cs" />
     <Compile Include="Model\Diamond.cs" />
     <Compile Include="Model\Drawable.cs" />
@@ -67,7 +69,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Draw.cs" />
-    <Compile Include="View\Main.cs" />
+    <Compile Include="View\InputView.cs" />
+    <Compile Include="View\MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

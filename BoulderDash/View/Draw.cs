@@ -19,32 +19,37 @@ namespace BoulderDash.View
 
         public void Print()
         {
-            //Node x = linkedList.Head;
-            //Node y = linkedList.Head;
+            Console.Clear();
+            Node x = mainController.view.Board.Head;
+            Node y = mainController.view.Board.Head;
 
-            //while (true)
-            //{
-            //    if (y.Data == null) Console.Write("*");
-            //    else
-            //    {
-            //        Console.Write(y.Data);
-            //    }
+            while (true)
+            {
+                if (y.Data == null)
+                {
+                    Console.Write("*");
+                }
+                else
+                {
+                    Console.Write(y.Data);
+                }
 
-            //    if (y.Right != null)
-            //    {
-            //        y = y.Right;
-            //    }
-            //    else if (x.Bottom != null)
-            //    {
-            //        Console.WriteLine();
-            //        y = x.Bottom;
-            //        x = y;
-            //    }
-            //    else
-            //    {
-            //        break;
-            //    }
-            //}
+                if (y.Right != null)
+                {
+                    y = y.Right;
+                }
+                else if (x.Bottom != null)
+                {
+                    Console.WriteLine();
+                    y = x.Bottom;
+                    x = y;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            Console.ReadKey();
         }
     }
 }

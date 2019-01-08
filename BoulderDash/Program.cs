@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model;
 using BoulderDash.Controller;
+using BoulderDash.View;
+
 namespace BoulderDash
 {
     public class Program
@@ -12,7 +14,8 @@ namespace BoulderDash
         static void Main(string[] args)
         {
             MainController mainController = new MainController();
-
+            MainView mainView = new MainView(mainController);
+            mainView.draw.Print();
 
 
 

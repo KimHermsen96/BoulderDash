@@ -14,7 +14,7 @@ namespace BoulderDash.Controller.Parser
     {
         private MainController mainController;
 
-        private LinkedList linkedList;
+        public LinkedList linkedList { get; set; }
         private LevelData levelData;
         private char[,] LevelArray;
 
@@ -59,7 +59,6 @@ namespace BoulderDash.Controller.Parser
                     {
                         linkedList.AppendRightAndBreak(false, CreateObject(LevelArray[i, j]));
                     }
-                    
                 }
             }
         }

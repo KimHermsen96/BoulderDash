@@ -9,23 +9,23 @@ namespace BoulderDash.Model.NLinkedList
 {
     public class LinkedList
     {
-        private Node head;
-        private Node LastAccessed;
-        private Node SecondLastRowFirstColumn;
-        private Node SecondLastRowColumnIterator;
+        private Node _head;
+        private Node _lastAccessed;
+        private Node _secondLastRowFirstColumn;
+        private Node _secondLastRowColumnIterator;
 
         public bool Empty()
         {
-            return head == null ? true : false;
+            return _head == null ? true : false;
         }
 
         public void AddFirst(Node x)
         {
-            if(head == null)
+            if(_head == null)
             {
-                this.head = x;
-                this.LastAccessed = this.head;
-                this.SecondLastRowFirstColumn = this.head;
+                this._head = x;
+                this._lastAccessed = this._head;
+                this._secondLastRowFirstColumn = this._head;
             }
             else
             {
@@ -36,7 +36,7 @@ namespace BoulderDash.Model.NLinkedList
         
         public void AppendRightAndBreak(bool newLine, Drawable data)
         {
-            Node x = new Node(data, null, null, null, null);
+            Node x = new Node(data);
 
             if (data != null) data.Node = x;
 
@@ -48,33 +48,33 @@ namespace BoulderDash.Model.NLinkedList
 
             if (newLine)
             {
-                LastAccessed = x;
-                SecondLastRowColumnIterator = SecondLastRowFirstColumn;
-                SecondLastRowColumnIterator.Bottom = x;
-                x.Top = SecondLastRowColumnIterator;
-                SecondLastRowColumnIterator = SecondLastRowColumnIterator.Right;
+                _lastAccessed = x;
+                _secondLastRowColumnIterator = _secondLastRowFirstColumn;
+                _secondLastRowColumnIterator.Bottom = x;
+                x.Top = _secondLastRowColumnIterator;
+                _secondLastRowColumnIterator = _secondLastRowColumnIterator.Right;
 
-                SecondLastRowFirstColumn = LastAccessed;
+                _secondLastRowFirstColumn = _lastAccessed;
             }
             else
             {
-                if(SecondLastRowColumnIterator != null)
+                if(_secondLastRowColumnIterator != null)
                 {
-                    SecondLastRowColumnIterator.Bottom = x;
-                    x.Top = SecondLastRowColumnIterator;
-                    SecondLastRowColumnIterator = SecondLastRowColumnIterator.Right;
+                    _secondLastRowColumnIterator.Bottom = x;
+                    x.Top = _secondLastRowColumnIterator;
+                    _secondLastRowColumnIterator = _secondLastRowColumnIterator.Right;
                 }
-                LastAccessed.Right = x;
-                x.Left = LastAccessed;
-                LastAccessed = x;
+                _lastAccessed.Right = x;
+                x.Left = _lastAccessed;
+                _lastAccessed = x;
             }
             
         }
 
         public Node Head
         {
-            get { return this.head; }
-            set { this.head = value; }
+            get { return this._head; }
+            set { this._head = value; }
         }
     }
 }

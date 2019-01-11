@@ -4,25 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Controller.Parser;
+using BoulderDash.View;
 
 namespace BoulderDash.Controller
 {
     public class MainController
     {
-        public Model.MainModel mainModel { get; set; }
-        public View view;
-        public Input input;
         private Game game;
+        public ParseLevel Parser { get; set; }
 
         public MainController()
         {
-            mainModel = new Model.MainModel();
-            game = new Game(this);
-            view = new View()
+            // in de parser word het veld geladen en de objecten aangemaakt. 
+            Parser = new ParseLevel();
+            var game = Parser.ChooseLevel(2);
+            
+            bool x = true;
+
+            while (x)
             {
-                Board = game.linkedList
-            };
-            input = new Input(game);
+                var key = Console.ReadKey(true).Key;
+                game.Move(key);
+                Console.Clear();
+                game.PrintBoard();
+            }
         }
     }
 }

@@ -9,14 +9,11 @@ namespace BoulderDash.View
 {
     class MainView
     {
-        public Draw draw;
-        private InputView inputView;
-        private MainController mainController;
+        public BoardView Board { get; private set; }
 
-        public MainView(MainController mainController)
+        public MainView()
         {
-            this.mainController = mainController;
-            draw = new Draw(this.mainController);
+            Board = new BoardView();
         }
     }
 }

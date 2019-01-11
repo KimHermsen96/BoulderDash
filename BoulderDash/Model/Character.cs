@@ -1,30 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BoulderDash.Model.NLinkedList;
+﻿using BoulderDash.Model.NLinkedList;
 
-namespace BoulderDash.Controller
+namespace BoulderDash.Model
 {
-    public class Move
+    public abstract class Character : Model.Drawable
     {
-        private Node Node { get; set; }
-
-        public Move(Node node)
-        {
-            Node = node;
-        }
-
-        private void MoveTo(Node newLocation)
+        public virtual void MoveTo(Node newLocation)
         {
             Node.Data = null;
             Node = newLocation;
             newLocation.Data = this;
-
         }
 
-    
+
         public void MoveRight()
         {
             var rightLocation = Node.Right;
@@ -48,6 +35,5 @@ namespace BoulderDash.Controller
             var down = Node.Bottom;
             MoveTo(down);
         }
-
     }
 }

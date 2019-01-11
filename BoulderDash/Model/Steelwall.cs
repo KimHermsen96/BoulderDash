@@ -7,38 +7,16 @@ using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public class Steelwall : Drawable
+    public class Steelwall : Wall
     {
-        public override Node Node { get; set; }
-
+        
         public override string ToString()
         {
             return "S";
         }
 
-        public override void PlayerInteract()
+        public override void Destroy()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void BolderInteract()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void RubbleInteract()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void FireFlyInteract()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void DiamondInteract()
-        {
-            throw new NotImplementedException();
         }
     }
 }

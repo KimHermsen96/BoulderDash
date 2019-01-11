@@ -10,36 +10,28 @@ namespace BoulderDash.Model
 {
     public class Wall : Drawable
     {
-        public override Node Node { get; set; }
-
+        
+        private int counter = 0;
         public override string ToString()
         {
             return "W";
         }
 
-        public override void PlayerInteract()
-        {
-            throw new NotImplementedException();
-        }
+//        public override void PlayerInteract(Node newLocation)
+//        {
+//
+//            if (counter == 3)
+//            {
+//                //Het huidige ding wordt leeg gemaakt. 
+//                Node.Data = null;
+//                //de node wordt de nieuwe node. 
+//                Node = newLocation;
+//                // in het node op de nieuew plek wordt het huidige object opgeslagen. 
+//                newLocation.Data = this;
+//            }
+//            counter++;
+//        }
 
-        public override void BolderInteract()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void RubbleInteract()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void FireFlyInteract()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void DiamondInteract()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

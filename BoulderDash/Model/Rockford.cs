@@ -3,83 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BoulderDash.Controller;
 using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public class Rockford : Drawable, ICharacter
+    public class Rockford : Character,  IExplodable
     {
-        public override Node Node { get; set; }
-
-        public Rockford()
-        {
-
-        }
-
-        //slaat eerst de nieuwe locatie op . 
-
-        private void MoveTo(Node newLocation)
-        {
-
-            Node.Data = null;
-            Node = newLocation;
-            newLocation.Data = this;
-        }
-
-        public void MoveRight()
-        {
-            var rightLocation = Node.Right;
-            MoveTo(rightLocation);
-
-        }
-
-        public void MoveLeft()
-        {
-            var leftLocation = Node.Left;
-            MoveTo(leftLocation);
-        }
-
-        public void MoveUp()
-        {
-            var up = Node.Top;
-            MoveTo(up);
-        }
-
-        public void MoveDown()
-        {
-            var down = Node.Bottom;
-            MoveTo(down);
-        }
-
         public override string ToString()
         {
             return "R";
         }
 
-        public override void PlayerInteract()
+        public void Explode()
         {
             throw new NotImplementedException();
         }
 
-        public override void BolderInteract()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void RubbleInteract()
+        public override void MoveTo(Node newLocation)
         {
-            throw new NotImplementedException();
-        }
-
-        public override void FireFlyInteract()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void DiamondInteract()
-        {
-            throw new NotImplementedException();
+            if (newLocation.Data != null)
+            {
+                newLocation.Data.Interact(this);
+            }
+            else
+            {
+                base.MoveTo(newLocation);
+            }
         }
     }
 }

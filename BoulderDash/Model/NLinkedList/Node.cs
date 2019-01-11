@@ -1,57 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoulderDash.Model.NLinkedList
 {
     public class Node
     {
-        private object data;
-        private Node top;
-        private Node bottom;
-        private Node left;
-        private Node right;
-
-
-        public Node(Object data, Node top, Node bottom, Node left, Node right)
+        public Node(Drawable data)
         {
-            this.data = data;
-            this.top = top;
-            this.bottom = bottom;
-            this.left = left;
-            this.right = right;
+            Data = data;
         }
 
-        public object Data
-        {
-            get { return this.data; }
-            set { this.data = value; }
-        }
-        
-        public Node Top
-        {
-            get { return this.top; }
-            set { this.top = value; }
-        }
+        public Drawable Data { get; set; }
 
-        public Node Bottom
-        {
-            get { return this.bottom; }
-            set { this.bottom = value; }
-        }
+        public Node Top { get; set; }
 
-        public Node Left
-        {
-            get { return this.left; }
-            set { this.left = value; }
-        }
+        public Node Bottom { get; set; }
 
-        public Node Right
-        {
-            get { return this.right; }
-            set { this.right = value; }
-        }
+        public Node Left { get; set; }
+
+        public Node Right { get; set; }
     }
 }

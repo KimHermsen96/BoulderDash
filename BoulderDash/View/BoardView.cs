@@ -8,30 +8,22 @@ using System.Threading.Tasks;
 
 namespace BoulderDash.View
 {
-    class Draw
+   public class BoardView
     {
-        private MainController mainController;
-
-        public Draw(MainController mainController)
+        public void Print(LinkedList linkedList)
         {
-            this.mainController = mainController;
-        }
-
-        public void Print()
-        {
-            Console.Clear();
-            Node x = mainController.view.Board.Head;
-            Node y = mainController.view.Board.Head;
-
+            Node x = linkedList.Head;
+            Node y = linkedList.Head;
+            string stringOutput = "";
             while (true)
             {
                 if (y.Data == null)
                 {
-                    Console.Write("*");
+                    stringOutput += " ";
                 }
                 else
                 {
-                    Console.Write(y.Data);
+                    stringOutput += y.Data;
                 }
 
                 if (y.Right != null)
@@ -40,7 +32,7 @@ namespace BoulderDash.View
                 }
                 else if (x.Bottom != null)
                 {
-                    Console.WriteLine();
+                    stringOutput += "\n";
                     y = x.Bottom;
                     x = y;
                 }
@@ -49,7 +41,7 @@ namespace BoulderDash.View
                     break;
                 }
             }
-            Console.ReadKey();
+            Console.Write(stringOutput);
         }
     }
 }

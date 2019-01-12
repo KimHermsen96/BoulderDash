@@ -43,7 +43,11 @@ namespace BoulderDash.Controller
                     return Wall = new Wall();
                 case 'S':
                     Steelwall SteelWall = new Steelwall();
-                    return SteelWall; 
+                    return SteelWall;
+                case 'T':
+                    Tnt Tnt = new Tnt();
+                    _game.MovableObject.Add(Tnt);
+                    return Tnt;
                 case 'H':
                     HardendMud HardendMud = new HardendMud();
                     _game.MovableObject.Add(HardendMud);

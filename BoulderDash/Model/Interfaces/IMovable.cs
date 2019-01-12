@@ -1,4 +1,4 @@
-﻿namespace BoulderDash.Model
+﻿namespace BoulderDash.Model.Interfaces
 {
     public interface IMovable 
     {

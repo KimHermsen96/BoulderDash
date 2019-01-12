@@ -28,12 +28,23 @@ namespace BoulderDash.Model
             {
                 // als rechts van je rockford staat
                 // dan moet je checken of links van je een plek vrij is (null)
-                //zo ja dan kun je naar links verschuiven
-                //en rockford ofcourse ook
+                // zo ja dan kun je naar links verschuiven
+                // en rockford ofcourse ook
 
                 if (Node.Left.Data == null)
                 {
-           
+                    //Het huidige ding war de bolder nu in staat word rockford. 
+                    Node.Data = character;
+                    //de node wordt de nieuwe node. 
+                    Node = Node.Left;
+                    // in het node op de nieuew plek wordt het huidige object opgeslagen. 
+                    Node.Left.Data = this;
+                }
+            }
+            else
+            {
+                if (Node.Right.Data == null)
+                {
                 }
             }
         }

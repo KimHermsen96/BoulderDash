@@ -17,21 +17,5 @@ namespace BoulderDash.Model
             return "W";
         }
 
-//        public override void PlayerInteract(Node newLocation)
-//        {
-//
-//            if (counter == 3)
-//            {
-//                //Het huidige ding wordt leeg gemaakt. 
-//                Node.Data = null;
-//                //de node wordt de nieuwe node. 
-//                Node = newLocation;
-//                // in het node op de nieuew plek wordt het huidige object opgeslagen. 
-//                newLocation.Data = this;
-//            }
-//            counter++;
-//        }
-
-
     }
 }

@@ -24,12 +24,14 @@ namespace BoulderDash.Model
 
         public override void MoveTo(Node newLocation)
         {
+
+            //als er een object in zit kijk dan hoe rockford moet interacteren met dit obj. 
             if (newLocation.Data != null)
             {
                 newLocation.Data.Interact(this);
             }
             else
-            {
+            {      //ruimte is leeg rockford kan gwn bewegen. 
                 base.MoveTo(newLocation);
             }
         }

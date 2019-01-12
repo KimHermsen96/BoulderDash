@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model;
+using BoulderDash.Model.Interfaces;
 using BoulderDash.View;
 
 namespace BoulderDash.Controller
@@ -20,10 +21,8 @@ namespace BoulderDash.Controller
 
         public BoardView BoardView { get; set; }
 
-//        public Movable move;
         public Game()
         {
-            
             MovableObject = new List<IMovable>();
             BoardView = new BoardView();
         }

@@ -11,7 +11,6 @@ namespace BoulderDash.Model
             newLocation.Data = this;
         }
 
-
         public void MoveRight()
         {
             var rightLocation = Node.Right;

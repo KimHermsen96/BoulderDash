@@ -1,11 +1,10 @@
-﻿namespace BoulderDash.Model
+﻿using BoulderDash.Model.Interfaces;
+
+namespace BoulderDash.Model
 {
     public abstract class SlidingObject : Drawable, IMovable
     {
-
         public bool IsDropping { get; set; } = false;
-
-
 
         public void Move()
         {
@@ -16,7 +15,7 @@
                         e.Explode();
                     break;
                 case null:
-                    this.DrawableDown();
+                    DrawableDown();
                     break;
             }
         }

@@ -17,14 +17,6 @@ namespace BoulderDash.Model
             Node.Data = null;
         }
 
-        //  public override abstract string ToString();
-        //
-        //        public abstract void PlayerInteract(Node newlocation);
-        //        public abstract void BolderInteract();
-        //        public abstract void RubbleInteract();
-        //        public abstract void FireFlyInteract();
-        //        public abstract void DiamondInteract();
-
         public virtual void Interact(Rockford character)
         {
 

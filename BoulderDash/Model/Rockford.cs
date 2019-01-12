@@ -11,6 +11,12 @@ namespace BoulderDash.Model
 {
     public class Rockford : Character,  IExplodable
     {
+        public GameProgress gameProgress;
+
+        public Rockford(GameProgress gameProgress)
+        {
+            this.gameProgress = gameProgress;
+        }
 
         public override string ToString()
         {

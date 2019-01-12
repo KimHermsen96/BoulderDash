@@ -13,7 +13,6 @@ namespace BoulderDash.Controller
 {
     public class Game
     {
-        private readonly MainController _mainController;
 
         public Rockford Rockford { get; set; }
         public LinkedList LinkedList { get; set; }

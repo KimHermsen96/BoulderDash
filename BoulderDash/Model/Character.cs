@@ -1,9 +1,13 @@
-﻿using BoulderDash.Model.NLinkedList;
+﻿using System;
+using BoulderDash.Model.Interfaces;
+using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
     public abstract class Character : Model.Drawable
     {
+
+
         public virtual void MoveTo(Node newLocation)
         {
             Node.Data = null;
@@ -34,5 +38,9 @@ namespace BoulderDash.Model
             var down = Node.Bottom;
             MoveTo(down);
         }
+
+
+
+        public Action<IMovable> DisposeAction { get; set; }
     }
 }

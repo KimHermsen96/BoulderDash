@@ -58,6 +58,7 @@
     <Compile Include="Model\Extensions\ExplodeExtension.cs" />
     <Compile Include="Model\Fallable.cs" />
     <Compile Include="Model\Firefly.cs" />
+    <Compile Include="Model\GameOverException.cs" />
     <Compile Include="Model\GameProgress.cs" />
     <Compile Include="Model\HardendMud.cs" />
     <Compile Include="Model\Interfaces\IExplodable.cs" />

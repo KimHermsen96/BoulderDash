@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Controller;
+using BoulderDash.Model.Extensions;
 using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.NLinkedList;
 
@@ -11,11 +12,11 @@ namespace BoulderDash.Model
 {
     public class Rockford : Character,  IExplodable
     {
-        public GameProgress gameProgress;
+        public readonly GameProgress GameProgress;
 
         public Rockford(GameProgress gameProgress)
         {
-            this.gameProgress = gameProgress;
+            GameProgress = gameProgress;
         }
 
         public override string ToString()
@@ -23,10 +24,10 @@ namespace BoulderDash.Model
             return "R";
         }
 
-        public void Explode()
+        public override void Destroy()
         {
-            // gameover; 
-            // restart level. 
+
+            throw new GameOverException();
         }
 
         public void Interact(Drawable obj)
@@ -46,6 +47,11 @@ namespace BoulderDash.Model
             {      //ruimte is leeg rockford kan gwn bewegen. 
                 base.MoveTo(newLocation);
             }
+        }
+
+        public void Explode()
+        {
+            this.ExplodeExt();
         }
     }
 }

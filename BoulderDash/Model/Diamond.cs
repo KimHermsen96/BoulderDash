@@ -26,11 +26,13 @@ namespace BoulderDash.Model
             character.Node.Data = null;
             //de nieuwe node van rockford wordt de node waar diamond nu in staat. 
             character.Node = Node;
+            //de node van diamond wordt de node waar eerst character in staat met data null. 
+            Node = character.Node;
         }
 
         private void ChangeGameProgress(Rockford character)
         {
-            character.gameProgress.DiamondsGot++;
+            character.GameProgress.DiamondsGot++;
         }
     }
 }

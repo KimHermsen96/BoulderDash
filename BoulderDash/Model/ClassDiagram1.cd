@@ -7,13 +7,6 @@
       <FileName>Model\Boulder.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoulderDash.Model.Diamond" Collapsed="true">
-    <Position X="11.25" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Diamond.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BoulderDash.Model.Firefly" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="15.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
@@ -42,14 +35,6 @@
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Mud.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="BoulderDash.Model.Rockford" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAgAIAAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Rockford.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BoulderDash.Model.Steelwall" Collapsed="true">
     <Position X="4.5" Y="3.25" Width="1.5" />
@@ -110,6 +95,21 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAA=</HashCode>
       <FileName>Model\Fallable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BoulderDash.Model.Diamond" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAEAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Diamond.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoulderDash.Model.Rockford" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAEAAAAAAgAIAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Rockford.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

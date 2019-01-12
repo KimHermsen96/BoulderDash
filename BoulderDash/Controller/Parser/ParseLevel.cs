@@ -46,6 +46,7 @@ namespace BoulderDash.Controller.Parser
             }
             
             game.LinkedList = CreateField();
+            game.MovableObject.ForEach(x => x.DisposeAction = game.DisposeMovable);
             return game;
 
         }

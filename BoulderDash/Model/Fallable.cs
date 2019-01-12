@@ -1,4 +1,5 @@
-﻿using BoulderDash.Model.Interfaces;
+﻿using System;
+using BoulderDash.Model.Interfaces;
 
 namespace BoulderDash.Model
 {
@@ -21,6 +22,14 @@ namespace BoulderDash.Model
                     break;
             }
         }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+            DisposeAction.Invoke(this);
+        }
+
+        public Action<IMovable> DisposeAction { get; set; }
 
         public void DrawableDown()
         {

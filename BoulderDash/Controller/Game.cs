@@ -17,6 +17,7 @@ namespace BoulderDash.Controller
 
         public Rockford Rockford { get; set; }
         public LinkedList LinkedList { get; set; }
+
         public List<IMovable> MovableObject { get; set; }
 
         public BoardView BoardView { get; set; }
@@ -35,7 +36,11 @@ namespace BoulderDash.Controller
 
         public void Move(ConsoleKey key)
         {
-            MovableObject.ForEach(el => el.Move());
+            for (var index = MovableObject.Count - 1; index >= 0; index--)
+            {
+                var el = MovableObject[index];
+                el.Move();
+            }
 
             switch (key)
             {
@@ -54,6 +59,9 @@ namespace BoulderDash.Controller
             }
         }
 
-
+        public void DisposeMovable(IMovable movable)
+        {
+            MovableObject.Remove(movable);
+        }
     }
 }

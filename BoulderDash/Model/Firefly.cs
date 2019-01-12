@@ -10,7 +10,7 @@ using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public class Firefly : Character, IMovable, IExplodable
+    public class Firefly : Character, IExplodable, IMovable
     {
         private Direction CurrentDirection { get; set; }
 
@@ -29,7 +29,6 @@ namespace BoulderDash.Model
 
             if (newLocation.Data is Rockford rockford)
             {
-                rockford.Explode();
                 Explode();
             }
             else
@@ -37,6 +36,13 @@ namespace BoulderDash.Model
                 base.MoveTo(newLocation);
             }
         }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+            DisposeAction.Invoke(this);
+        }
+
 
         public void Move()
         {

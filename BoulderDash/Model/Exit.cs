@@ -16,7 +16,14 @@ namespace BoulderDash.Model
 
         public override string ToString()
         {
-            return "E";
+            if (gameProgress.DiamondsNeeded == gameProgress.DiamondsGot)
+            {
+                return "E";
+            }
+            else
+            {
+                return "█";
+            }
         }
 
         public override void Interact(Rockford character)

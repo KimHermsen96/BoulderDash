@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using BoulderDash.Controller;
 using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.NLinkedList;
@@ -19,34 +20,32 @@ namespace BoulderDash.Model
 
         public override void Interact(Rockford character)
         {
-
-            // een bolder kan enkel naar links of naar rechts verplaatsen. 
-            // de ruimte achter een bolder moet null zijn. 
-
-
             if (Node.Right == character.Node)
             {
-                // als rechts van je rockford staat
-                // dan moet je checken of links van je een plek vrij is (null)
-                // zo ja dan kun je naar links verschuiven
-                // en rockford ofcourse ook
-
                 if (Node.Left.Data == null)
                 {
-                    //Het huidige ding war de bolder nu in staat word rockford. 
-                    Node.Data = character;
-
-                    //de node wordt de nieuwe node. 
-                    Node = Node.Left;
-                    // in het node op de nieuew plek wordt het huidige object opgeslagen. 
                     Node.Left.Data = this;
+                    Node.Data = character;
+                    character.Node.Data = null;
+                    character.Node = Node;
+                    Node = this.Node.Left;
                 }
             }
             else
             {
                 if (Node.Right.Data == null)
                 {
-
+                    // de rechternode wordt boulder. 
+                    Node.Right.Data = this;
+                    //de inhoud van de node waar nu boulder in staat wordt character. 
+                    Node.Data = character;
+                    //de data van node locatie van rockford wordt null 
+                    character.Node.Data = null;
+                    //de huidige node van het character is deze node. 
+                    character.Node = Node;
+                    //de huidige node van dit characer is de rechternode. 
+                    Node = this.Node.Right;
+                    //de nieuwe node van rockford wordt de node waar boulder nu in staat. 
                 }
             }
         }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Controller;
+using BoulderDash.Model.Extensions;
 using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.NLinkedList;
 
@@ -20,7 +21,21 @@ namespace BoulderDash.Model
 
         public void Explode()
         {
-            throw new NotImplementedException();
+            this.ExplodeExt();
+        }
+
+        public override void MoveTo(Node newLocation)
+        {
+
+            if (newLocation.Data is Rockford rockford)
+            {
+                rockford.Explode();
+                Explode();
+            }
+            else
+            {
+                base.MoveTo(newLocation);
+            }
         }
 
         public void Move()
@@ -36,14 +51,14 @@ namespace BoulderDash.Model
                         {
                             MoveUp();
                             return;
-                        } 
+                        }
                         break;
                     case Direction.Right:
                         if (Node.Right.Data == null || Node.Right.Data is Rockford)
                         {
                             MoveRight();
                             return;
-                        }
+                        };
                         break;
                     case Direction.Down:
                         if (Node.Bottom.Data == null || Node.Bottom.Data is Rockford)

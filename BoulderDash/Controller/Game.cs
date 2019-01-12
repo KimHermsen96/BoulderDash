@@ -14,6 +14,7 @@ namespace BoulderDash.Controller
     public class Game
     {
         private readonly MainController _mainController;
+        private int _move = 0;
 
         public Rockford Rockford { get; set; }
         public LinkedList LinkedList { get; set; }
@@ -32,10 +33,10 @@ namespace BoulderDash.Controller
             BoardView.Print(LinkedList);
         }
 
-
         public void Move(ConsoleKey key)
         {
             MovableObject.ForEach(el => el.Move());
+
             switch (key)
             {
                 case ConsoleKey.UpArrow:

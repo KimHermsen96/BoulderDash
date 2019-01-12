@@ -18,9 +18,14 @@ namespace BoulderDash.Model
 
         public void Explode()
         {
-            throw new NotImplementedException();
+            // gameover; 
+            // restart level. 
         }
 
+        public void Interact(Drawable obj)
+        {
+
+        }
 
         public override void MoveTo(Node newLocation)
         {

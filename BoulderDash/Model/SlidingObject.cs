@@ -1,32 +1,13 @@
 ﻿using BoulderDash.Model.Interfaces;
+using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public abstract class SlidingObject : Drawable, IMovable
+    public abstract class SlidingObject : Fallable , IMovable
     {
-        public bool IsDropping { get; set; } = false;
-
-        public void Move()
+        public override void Move()
         {
-            switch (Node.Bottom.Data)
-            {
-                case IExplodable e:
-                    if(IsDropping)
-                        e.Explode();
-                    break;
-                case null:
-                    DrawableDown();
-                    break;
-            }
-        }
-
-        public void DrawableDown()
-        {
-            var newLocation = Node.Bottom;
-            IsDropping = true;
-            Node.Data = null;
-            Node = newLocation;
-            newLocation.Data = this;
+            base.Move();
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,32 +11,29 @@ using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public class HardendMud : Mud , IMovable
+    public class HardendMud : Fallable , IMovable
     {
-        private int counter = 0; 
+        private int counter = 0;
+        private bool rubble => counter >= 3;
+        
         public override string ToString()
         {
+            if (rubble) return "h";
+
             return "H"; 
         }
 
-        public void Move()
+        public override void Move()
         {
-       
+            if (rubble)
+            {
+                base.Move();
+            }
         }
 
         public override void Interact(Rockford character)
         {
-            base.Interact(character);
-            //if (counter == 3)
-            //{
-            //    //Het huidige ding wordt leeg gemaakt. 
-            //    Node.Data = null;
-            //    //de node wordt de nieuwe node. 
-            //    Node = newLocation;
-            //    // in het node op de nieuew plek wordt het huidige object opgeslagen. 
-            //    newLocation.Data = this;
-            //}
-            //counter++;
+            counter++;
         }
     }
 }

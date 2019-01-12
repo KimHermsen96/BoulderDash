@@ -51,7 +51,7 @@ namespace BoulderDash.Controller
                 case 'H':
                     HardendMud HardendMud = new HardendMud();
                     _game.MovableObject.Add(HardendMud);
-                    return HardendMud = new HardendMud();
+                    return HardendMud;
                 default:
                     return null;
             }

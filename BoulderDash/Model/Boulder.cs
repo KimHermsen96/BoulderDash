@@ -35,6 +35,7 @@ namespace BoulderDash.Model
                 {
                     //Het huidige ding war de bolder nu in staat word rockford. 
                     Node.Data = character;
+
                     //de node wordt de nieuwe node. 
                     Node = Node.Left;
                     // in het node op de nieuew plek wordt het huidige object opgeslagen. 
@@ -45,6 +46,7 @@ namespace BoulderDash.Model
             {
                 if (Node.Right.Data == null)
                 {
+
                 }
             }
         }

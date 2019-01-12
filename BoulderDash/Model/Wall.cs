@@ -14,7 +14,7 @@ namespace BoulderDash.Model
         private int counter = 0;
         public override string ToString()
         {
-            return "W";
+            return "▓";
         }
 
     }

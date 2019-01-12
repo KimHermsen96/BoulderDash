@@ -20,12 +20,11 @@ namespace BoulderDash.Controller
             var game = Parser.ChooseLevel(3);
             
             bool x = true;
-
+            game.PrintBoard();
             while (x)
             {
                 var key = Console.ReadKey(true).Key;
                 game.Move(key);
-                Console.Clear();
                 game.PrintBoard();
             }
         }

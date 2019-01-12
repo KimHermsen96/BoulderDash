@@ -12,7 +12,7 @@ namespace BoulderDash.Model
         
         public override string ToString()
         {
-            return "S";
+            return "█";
         }
 
         public override void Destroy()

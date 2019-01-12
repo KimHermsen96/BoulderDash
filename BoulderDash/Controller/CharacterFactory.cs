@@ -10,10 +10,13 @@ namespace BoulderDash.Controller
     public class CharacterFactory
     {
         private readonly Game _game;
+        private GameProgress gameProgress;
 
-        public CharacterFactory(Game game)
+        public CharacterFactory(Game game, int level)
         {
+            this.gameProgress = new GameProgress();
             _game = game;
+            
         }
 
         public Model.Drawable CreateObject(char drawable)
@@ -21,11 +24,10 @@ namespace BoulderDash.Controller
             switch (drawable)
             {
                 case 'R':
-                    return _game.Rockford = new Rockford(); ;
+                    return _game.Rockford = new Rockford(gameProgress);
                 case 'F':
                     Firefly firefly = new Firefly();
                     _game.MovableObject.Add(firefly);
-                    // mainController.mainModel.Fireflies.Add(firefly);
                     return firefly;
                 case 'M':
                     Mud Mud = new Mud();
@@ -36,11 +38,12 @@ namespace BoulderDash.Controller
                     return Boulder; 
                 case 'D':
                     Diamond Diamond = new Diamond();
+                    gameProgress.DiamondsNeeded++;
                     _game.MovableObject.Add(Diamond);
                     return Diamond;
                 case 'W':
                     Wall Wall = new Wall();
-                    return Wall = new Wall();
+                    return Wall;
                 case 'S':
                     Steelwall SteelWall = new Steelwall();
                     return SteelWall;
@@ -52,6 +55,9 @@ namespace BoulderDash.Controller
                     HardendMud HardendMud = new HardendMud();
                     _game.MovableObject.Add(HardendMud);
                     return HardendMud;
+                case 'E':
+                    Exit exit = new Exit(gameProgress, _game);
+                    return exit;
                 default:
                     return null;
             }

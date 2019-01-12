@@ -40,7 +40,7 @@ namespace BoulderDash.Controller
                     return Diamond;
                 case 'W':
                     Wall Wall = new Wall();
-                    return Wall = new Wall();
+                    return Wall;
                 case 'S':
                     Steelwall SteelWall = new Steelwall();
                     return SteelWall;
@@ -51,7 +51,7 @@ namespace BoulderDash.Controller
                 case 'H':
                     HardendMud HardendMud = new HardendMud();
                     _game.MovableObject.Add(HardendMud);
-                    return HardendMud = new HardendMud();
+                    return HardendMud;
                 default:
                     return null;
             }

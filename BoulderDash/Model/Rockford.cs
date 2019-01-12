@@ -11,6 +11,7 @@ namespace BoulderDash.Model
 {
     public class Rockford : Character,  IExplodable
     {
+
         public override string ToString()
         {
             return "R";
@@ -20,7 +21,6 @@ namespace BoulderDash.Model
         {
             throw new NotImplementedException();
         }
-
 
         public override void MoveTo(Node newLocation)
         {

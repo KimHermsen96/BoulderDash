@@ -17,15 +17,14 @@ namespace BoulderDash.Controller
         {
             // in de parser word het veld geladen en de objecten aangemaakt. 
             Parser = new ParseLevel();
-            var game = Parser.ChooseLevel(2);
+            this.game = Parser.ChooseLevel(2);
             
             bool x = true;
-
+            game.PrintBoard();
             while (x)
             {
                 var key = Console.ReadKey(true).Key;
                 game.Move(key);
-                Console.Clear();
                 game.PrintBoard();
             }
         }

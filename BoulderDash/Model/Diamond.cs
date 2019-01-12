@@ -17,5 +17,14 @@ namespace BoulderDash.Model
             return "D";
         }
 
+        public override void Interact(Rockford character)
+        {
+            //de inhoud van de node waar nu diamond in staat wordt character. 
+            Node.Data = character;
+            //de data van node locatie van rockford wordt null 
+            character.Node.Data = null;
+            //de nieuwe node van rockford wordt de node waar diamond nu in staat. 
+            character.Node = Node;
+        }
     }
 }

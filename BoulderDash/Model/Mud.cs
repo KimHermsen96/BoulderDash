@@ -13,7 +13,7 @@ namespace BoulderDash.Model
         
         public override string ToString()
         {
-            return "M";
+            return "░";
         }
 
         public override void Interact(Rockford character)

@@ -29,6 +29,7 @@ namespace BoulderDash.Controller
 
         public void PrintBoard()
         {
+            Console.Clear();
             BoardView.Print(LinkedList);
         }
 

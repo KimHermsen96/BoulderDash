@@ -11,7 +11,7 @@ using BoulderDash.Model.NLinkedList;
 
 namespace BoulderDash.Model
 {
-    public class HardendMud : Fallable , IMovable
+    public class HardendMud : Fallable 
     {
         private int counter = 0;
         private bool rubble => counter >= 3;

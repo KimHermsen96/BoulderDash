@@ -16,6 +16,5 @@ namespace BoulderDash.Model
         {
             return "D";
         }
-
     }
 }

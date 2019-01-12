@@ -2,7 +2,7 @@
 
 namespace BoulderDash.Model
 {
-    public class Fallable : Drawable
+    public class Fallable : Drawable, IMovable
     {
         public bool IsDropping { get; set; } = false;
         public virtual void Move()
@@ -15,6 +15,9 @@ namespace BoulderDash.Model
                     break;
                 case null:
                     DrawableDown();
+                    break;
+                default:
+                    IsDropping = false;
                     break;
             }
         }

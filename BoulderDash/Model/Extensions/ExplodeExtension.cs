@@ -12,15 +12,15 @@ namespace BoulderDash.Model.Extensions
     {
         public static void ExplodeExt(this IExplodable exp)
         {
-            exp.Node.Data = null;
-            exp.Node.Top.Data = null;
-            exp.Node.Top.Right.Data = null;
-            exp.Node.Top.Left.Data = null;
-            exp.Node.Bottom.Data = null;
-            exp.Node.Bottom.Right.Data = null;
-            exp.Node.Bottom.Left.Data = null;
-            exp.Node.Right.Data = null;
-            exp.Node.Left.Data = null;
+            exp.Node.Data.Destroy();
+            exp.Node.Top.Data.Destroy();
+            exp.Node.Top.Right.Data.Destroy();
+            exp.Node.Top.Left.Data.Destroy();
+            exp.Node.Bottom.Data.Destroy();
+            exp.Node.Bottom.Right.Data.Destroy();
+            exp.Node.Bottom.Left.Data.Destroy();
+            exp.Node.Right.Data.Destroy();
+            exp.Node.Left.Data.Destroy();
         }
     }
 }

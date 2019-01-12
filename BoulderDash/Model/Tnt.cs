@@ -3,7 +3,7 @@ using BoulderDash.Model.Interfaces;
 
 namespace BoulderDash.Model
 {
-    class Tnt : SlidingObject, IExplodable, IMovable
+    class Tnt : SlidingObject, IExplodable
     {
         private int counter = 0; 
 

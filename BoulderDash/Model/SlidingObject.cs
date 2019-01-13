@@ -7,6 +7,7 @@ namespace BoulderDash.Model
     {
         public override void Move()
         {
+            base.Move();
             if (Node.Bottom.Right.Data == null && Node.Right.Data == null)
             {
                 Node.Bottom.Right.Data = this;

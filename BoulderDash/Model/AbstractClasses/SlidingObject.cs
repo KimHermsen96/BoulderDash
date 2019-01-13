@@ -9,15 +9,15 @@ namespace BoulderDash.Model.AbstractClasses
     {
         public override void Move()
         {
-            base.Move();
-            if (Node.Bottom.Right.Data == null && Node.Right.Data == null)
+
+            if (Node.Bottom.Right.Data == null && Node.Right.Data == null && Node.Bottom.Data is SlidingObject)
             {
                 Node.Bottom.Right.Data = this;
                 Node.Data = null;
                 Node = this.Node.Bottom.Right;
             }
 
-            if (Node.Bottom.Left.Data == null && Node.Left.Data == null)
+            if (Node.Bottom.Left.Data == null && Node.Left.Data == null && Node.Bottom.Data is SlidingObject)
             {
                 Node.Bottom.Left.Data = this;
                 Node.Data = null;

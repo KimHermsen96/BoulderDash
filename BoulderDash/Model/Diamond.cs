@@ -22,6 +22,7 @@ namespace BoulderDash.Model
             this.ChangeGameProgress(character);
             //de inhoud van de node waar nu diamond in staat wordt character. 
             Node.Data = character;
+            DisposeAction.Invoke(this);
             //de data van node locatie van rockford wordt null 
             character.Node.Data = null;
             //de nieuwe node van rockford wordt de node waar diamond nu in staat. 
@@ -29,6 +30,7 @@ namespace BoulderDash.Model
             //de node van diamond wordt de node waar eerst character in staat met data null. 
             Node = character.Node;
         }
+
 
         private void ChangeGameProgress(Rockford character)
         {

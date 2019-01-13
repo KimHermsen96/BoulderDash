@@ -19,7 +19,6 @@ namespace BoulderDash.Controller.Parser
         public CharacterFactory CharacterFactory;
         public Game game;
 
-
         public ParseLevel()
         {
             levelData = new LevelData();

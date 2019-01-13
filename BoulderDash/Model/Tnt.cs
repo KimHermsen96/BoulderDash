@@ -6,8 +6,8 @@ namespace BoulderDash.Model
 {
     class Tnt : SlidingObject, IExplodable
     {
-        private int counter = 0; 
-
+        private int counter = 0;
+        private bool explode = false;
         public void Explode()
         {   
             this.ExplodeExt();
@@ -27,6 +27,14 @@ namespace BoulderDash.Model
         public override void Move()
         {
             base.Move();
+            if(this.IsDropping)
+            {
+                explode = true;
+            }
+            else if(!this.IsDropping && explode)
+            {
+                this.Explode();
+            }
             counter++;
             if (counter >= 90) Explode();
         }

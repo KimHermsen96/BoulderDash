@@ -18,7 +18,7 @@ namespace BoulderDash.Controller
         {
             // in de parser word het veld geladen en de objecten aangemaakt. 
             this.Parser = new ParseLevel();
-            this.game = Parser.ChooseLevel(1, this);
+            this.game = Parser.ChooseLevel(3, this);
 
             bool x = true;
             game.PrintBoard();

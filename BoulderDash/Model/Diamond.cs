@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Controller;
+using BoulderDash.Model.AbstractClasses;
 using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.NLinkedList;
 

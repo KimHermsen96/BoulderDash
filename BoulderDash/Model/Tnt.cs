@@ -1,4 +1,5 @@
-﻿using BoulderDash.Model.Extensions;
+﻿using BoulderDash.Model.AbstractClasses;
+using BoulderDash.Model.Extensions;
 using BoulderDash.Model.Interfaces;
 
 namespace BoulderDash.Model
@@ -27,7 +28,7 @@ namespace BoulderDash.Model
         {
             base.Move();
             counter++;
-            if (counter >= 30) Explode();
+            if (counter >= 90) Explode();
         }
 
         public override string ToString()

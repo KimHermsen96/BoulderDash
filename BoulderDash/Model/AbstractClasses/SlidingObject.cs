@@ -1,9 +1,11 @@
-﻿using BoulderDash.Model.Interfaces;
+﻿using BoulderDash.Model.AbstractClasses;
+using BoulderDash.Model.Interfaces;
 using BoulderDash.Model.NLinkedList;
 
-namespace BoulderDash.Model
+namespace BoulderDash.Model.AbstractClasses
+
 {
-    public abstract class SlidingObject : Fallable , IMovable
+    public abstract class SlidingObject : Fallable 
     {
         public override void Move()
         {

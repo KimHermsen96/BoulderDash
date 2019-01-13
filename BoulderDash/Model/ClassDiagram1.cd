@@ -1,124 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BoulderDash.Model.Boulder" Collapsed="true">
-    <Position X="9" Y="4.75" Width="1.5" />
+    <Position X="20.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Boulder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoulderDash.Model.Firefly" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="3.25" Width="1.5" />
+    <Position X="11.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAGAAAAAAgAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAGAAAAAAgAAABIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Firefly.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BoulderDash.Model.HardendMud" Collapsed="true">
-    <Position X="8.5" Y="3.25" Width="1.5" />
+    <Position X="18" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAIAAAAAEAAAAAAAAIAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Model\HardendMud.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoulderDash.Model.MainModel" Collapsed="true">
-    <Position X="22.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>Model\MainModel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BoulderDash.Model.Mud" Collapsed="true">
-    <Position X="6.75" Y="1.75" Width="1.5" />
+    <Position X="15.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Mud.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoulderDash.Model.Steelwall" Collapsed="true">
-    <Position X="4.5" Y="3.25" Width="1.5" />
+    <Position X="6.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Steelwall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoulderDash.Model.Wall" Collapsed="true">
-    <Position X="4.5" Y="1.75" Width="1.5" />
+    <Position X="6.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoulderDash.Model.Tnt" Collapsed="true">
-    <Position X="13.5" Y="4.75" Width="1.5" />
+  <Class Name="BoulderDash.Model.Tnt" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAEAAAAAAgAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAgAIAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Tnt.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BoulderDash.Model.SlidingObject" Collapsed="true">
-    <Position X="11.25" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\SlidingObject.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="BoulderDash.Model.Character" Collapsed="true">
-    <Position X="17" Y="1.75" Width="1.5" />
+  <Class Name="BoulderDash.Model.AbstractClasses.Character" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAIAAAIQAAAAAAAAAA=</HashCode>
-      <FileName>Model\Character.cs</FileName>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAoAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Model\AbstractClasses\Character.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoulderDash.Model.Drawable" Collapsed="true">
-    <Position X="11.25" Y="0.5" Width="1.5" />
+  <Class Name="BoulderDash.Model.AbstractClasses.Drawable" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>Model\Drawable.cs</FileName>
+      <FileName>Model\AbstractClasses\Drawable.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="BoulderDash.Model.Destructable" Collapsed="true">
-    <Position X="20.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Destructable.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BoulderDash.Model.Fallable" Collapsed="true">
-    <Position X="11.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAA=</HashCode>
-      <FileName>Model\Fallable.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BoulderDash.Model.Diamond" Collapsed="true">
-    <Position X="11.25" Y="4.75" Width="1.5" />
+    <Position X="22.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAEAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Diamond.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoulderDash.Model.Rockford" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18" Y="3.25" Width="1.5" />
+    <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAEAAAAAAgAIAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAEAAAAAAgAIABIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Rockford.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="BoulderDash.Model.IMovable" Collapsed="true">
-    <Position X="20.75" Y="2" Width="1.5" />
+  <Class Name="BoulderDash.Model.AbstractClasses.Fallable" Collapsed="true">
+    <Position X="21.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAABgAAAAgACAAAAAAAA=</HashCode>
+      <FileName>Model\AbstractClasses\Fallable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BoulderDash.Model.AbstractClasses.SlidingObject" Collapsed="true">
+    <Position X="22.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Movable.cs</FileName>
+      <FileName>Model\AbstractClasses\SlidingObject.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Class>
+  <Class Name="BoulderDash.Model.Exit" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAEAAAAAAAAIAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Exit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

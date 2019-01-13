@@ -1,11 +1,12 @@
 ﻿using System;
 using BoulderDash.Model.Interfaces;
 
-namespace BoulderDash.Model
+namespace BoulderDash.Model.AbstractClasses
 {
-    public class Fallable : Drawable, IMovable
+    public abstract class Fallable : Drawable, IMovable
     {
         public bool IsDropping { get; set; } = false;
+
         public virtual void Move()
         {
             switch (Node.Bottom.Data)

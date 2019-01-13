@@ -1,4 +1,5 @@
 ﻿using System;
+using BoulderDash.Model.AbstractClasses;
 
 namespace BoulderDash.Model.NLinkedList
 {

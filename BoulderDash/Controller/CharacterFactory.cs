@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BoulderDash.Model;
+using BoulderDash.Model.AbstractClasses;
 
 namespace BoulderDash.Controller
 {
@@ -20,7 +21,7 @@ namespace BoulderDash.Controller
             
         }
 
-        public Model.Drawable CreateObject(char drawable)
+        public Drawable CreateObject(char drawable)
         {
             switch (drawable)
             {

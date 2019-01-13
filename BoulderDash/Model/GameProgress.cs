@@ -11,10 +11,5 @@ namespace BoulderDash.Model
         public int DiamondsNeeded {get; set;}
         public int DiamondsGot {get; set;}
         public int level { get; set; }
-
-        public GameProgress()
-        {
-            level = 1;
-        }
     }
 }

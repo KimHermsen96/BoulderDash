@@ -11,9 +11,10 @@ namespace BoulderDash.Controller
     {
         private readonly Game _game;
         private GameProgress gameProgress;
-
-        public CharacterFactory(Game game, int level)
+        private MainController mainController;
+        public CharacterFactory(Game game, int level, MainController mainController)
         {
+            this.mainController = mainController;
             this.gameProgress = new GameProgress();
             _game = game;
             
@@ -56,7 +57,7 @@ namespace BoulderDash.Controller
                     _game.MovableObject.Add(HardendMud);
                     return HardendMud;
                 case 'E':
-                    Exit exit = new Exit(gameProgress, _game);
+                    Exit exit = new Exit(gameProgress, mainController);
                     return exit;
                 default:
                     return null;

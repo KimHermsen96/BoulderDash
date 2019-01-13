@@ -7,10 +7,11 @@ namespace BoulderDash.Model
     class Exit : Drawable
     {
         private GameProgress gameProgress;
-        private Game game;
+        private MainController mainController;
 
-        public Exit(GameProgress gameProgress, Game game)
+        public Exit(GameProgress gameProgress, MainController mainController)
         {
+            this.mainController = mainController;
             this.gameProgress = gameProgress;
         }
 
@@ -32,8 +33,8 @@ namespace BoulderDash.Model
             {
                 try
                 {
-                    ParseLevel parser = new ParseLevel();
-                    game = parser.ChooseLevel(gameProgress.level++);
+                    mainController.Parser = new ParseLevel();
+                    mainController.game = mainController.Parser.ChooseLevel(2, mainController);
                 }
                 catch (Exception e)
                 {

@@ -24,10 +24,10 @@ namespace BoulderDash.Controller.Parser
             levelData = new LevelData();
         }
 
-        public Game ChooseLevel(int level)
+        public Game ChooseLevel(int level, MainController mainController)
         {
             var game = new Game();
-            CharacterFactory = new CharacterFactory(game, level);
+            CharacterFactory = new CharacterFactory(game, level, mainController);
 
             switch (level)
             {

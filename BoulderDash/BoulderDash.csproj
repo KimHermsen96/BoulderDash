@@ -71,7 +71,6 @@
     <Compile Include="Model\Steelwall.cs" />
     <Compile Include="Model\Tnt.cs" />
     <Compile Include="Model\Wall.cs" />
-    <Compile Include="MovableExtension.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\BoardView.cs" />
